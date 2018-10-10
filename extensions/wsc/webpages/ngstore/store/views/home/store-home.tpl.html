@@ -1,0 +1,43 @@
+<!--
+  Licensed Materials - Property of IBM Sterling Order Management Store (5725-D10)
+  (C) Copyright IBM Corp. 2015 All Rights Reserved. , 2015 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<div class="home-page screen-holder" role="region" isc-i18n="[aria-label]home.aria_homeHeaderRegion" >
+	<div class="screen-header-text-alt screen-header tile-layout">
+		<div role="heading" aria-level="1" isc-i18n="home.TITLE_Home_2"></div>
+	</div>
+
+	<!--<uib-carousel interval="ui.homePortlets.carousel.myInterval"
+		no-wrap="ui.homePortlets.carousel.noWrapSlides">
+		
+		<uib-slide active="$first" ng-repeat="portletData in ui.homePortlets.carousel.data">
+			<div class="col-sm-6 col-md-6 col-xs-12 portlet-content" ng-repeat="portlet in portletData.portlet">
+				<div>
+					<p class="portlet-header-text text-center" isc-i18n="{{portlet.headerTitleBundle}}"></p>
+					<p class="text-center protlet-icon" ng-class="portlet.headerIconClass"></p>
+					<div ng-include="portlet.actionBarTemplate" isc-dynamic-controller="portlet.controller"></div>
+				</div>
+			</div>
+		</uib-slide>
+	</uib-carousel>-->
+	<isc-portlet-set>
+		<isc-portlet template-url="./store/views/home/find-products-portlet.tpl.html" controller="store.views.home.find-products-portlet" resource-id="WSC000031"></isc-portlet>
+		<isc-portlet template-url="./store/views/home/quick-checkout-portlet.tpl.html" controller="store.views.home.quick-checkout-portlet" resource-id="WSC000031"></isc-portlet>
+		<isc-portlet template-url="./store/views/home/returns-portlet.tpl.html" controller="store.views.home.returns-portlet" resource-id="WSC000033"></isc-portlet>
+		<isc-portlet template-url="../extn/ngstore/store/views/home/watson-portlet.tpl.html" controller="store.views.home.watson-portlet" resource-id="WSC000033"></isc-portlet>
+	</isc-portlet-set>
+	<div class="form-view bottom-menu-panel">
+		<div isc-resource-id="WSCFO0TER001" class="site-map">
+			<a href="#" class="" ng-click="uiOpenSiteMap()">
+				<span class="" isc-i18n="home.TITLE_SiteMap"></span>
+			</a>
+		</div>
+		<a href="#" class="switch-dashboard anchor-icon" isc-i18n="[title]home.TOOLTIP_SwitchView" ng-click="uiGoToBackRoomPickup();">
+			<span class="app-glyphicons app-icon-dashboard_switch"></span>
+			<span class="sr-only" isc-i18n="home.TOOLTIP_SwitchView"></span>
+		</a>
+		
+	</div>
+
+</div>

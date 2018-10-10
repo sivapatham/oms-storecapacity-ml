@@ -1,0 +1,64 @@
+<!--
+  Licensed Materials - Property of IBM Sterling Order Management Store (5725-D10), IBM Order Management (5737-D18)
+  (C) Copyright IBM Corp. 2016, 2017 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<div class="site-map">
+	<div class="screen-holder">
+
+		<div class="screen-header tile-layout">
+			<div>
+				<span role="heading" aria-level="1" class="screen-header-text" isc-i18n="home.TITLE_SiteMap"></span>
+			</div>		
+		</div>
+	
+		<div class="screen-content tile-layout">
+			<div class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="home.TITLE_OrderFulfillment"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenOrderFulfillment()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_OrderFulfillmentView"></span>
+				</a>
+			</div>
+			
+			<div ng-if="ui.hasMgrDashboardPermission" class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="home.TITLE_ManagerDashboard"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenManagerDashboard()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_ManagerDashboardView"></span>
+				</a>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenAskWatson()">
+					<span class="primary-link-text" isc-i18n="Predict Store Capacity"></span>
+				</a>
+                        </div>
+
+			<div isc-resource-id="WSC000031" class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="home.TITLE_Order"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenFindProducts()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_FindProducts"></span>
+				</a>
+			</div>
+			
+			<div isc-resource-id="WSC000033" class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="home.TITLE_Returns"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenReturns()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_ReturnItems"></span>
+				</a>
+			</div>
+			
+			<div isc-resource-id="WSC000041" class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="home.TITLE_Shipment"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiOpenReceivingShipmentList()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_InStoreReceiving"></span>
+				</a>
+			</div>
+			
+			<div isc-resource-id="WSC000047" class="group-content">
+				<span class="grp-hdr-txt" isc-i18n="globals.TITLE_Customer"></span>
+				<a href="#" class="secondary-link-text" ng-click="uiFindCustomers()">
+					<span class="primary-link-text" isc-i18n="home.TITLE_FindCustomer"></span>
+				</a>
+			</div>
+		</div> 
+	</div>
+</div>
+
+

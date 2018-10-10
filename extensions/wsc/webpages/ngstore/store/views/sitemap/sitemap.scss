@@ -1,0 +1,71 @@
+/*******************************************************************************
+ * IBM Confidential
+ * OCO Source Materials
+ * IBM Sterling Order Management Store (5725-D10)
+ * (C) Copyright IBM Corp. 2016 All Rights Reserved.
+ * The source code for this program is not published or otherwise divested of its trade secrets, irrespective of what has been deposited with the U.S. Copyright Office.
+ ******************************************************************************/
+.comapps .site-map {
+	
+	.screen-holder {
+		.screen-header {
+		    min-height: 50px;
+		}
+		
+		.screen-content {
+			border-top: none;
+			border-bottom: none;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    			
+			.group-content {				
+				display: inline-block;
+				min-width: calc(50% - 30px);
+				margin-bottom: 25px;
+				vertical-align: top;
+				@include right-margin(20px);
+				
+				.grp-hdr-txt {
+					display: inline-block;
+					border-bottom: $horizontal-line-border;
+					margin-bottom: 10px;
+					min-width: 150px;
+					padding: 5px;
+				}
+				
+				a {
+					display: block;
+					margin-bottom: 10px;
+					@include left-padding(5px);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-mobile) {
+	.comapps .site-map {
+		
+		.screen-holder {
+			.screen-header {
+			    min-height: 40px;
+			}
+		}
+	}
+}
+
+@media (min-width: $breakpoint-tablet + 1) {
+	.comapps .site-map {
+		
+		.screen-holder {
+			@include box-shadow-default();
+			border: 1px solid $tile-border-color;
+			background-color: $tile-background-color;
+			min-height: 300px;
+			
+			.screen-header {
+			    min-height: 65px;
+			}
+		}
+	}
+}

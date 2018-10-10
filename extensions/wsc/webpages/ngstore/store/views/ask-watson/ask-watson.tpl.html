@@ -1,0 +1,161 @@
+<!--IBM Confidential
+IBM Sterling Order Management Store (5725-D10) - The program identifier and security classification are determined by the IBM owner of the program.
+(C) Copyright IBM Corp. 2016 All Rights Reserved.
+-->
+<div class="ask-watson">
+	<div class="screen-holder" role="region">
+		
+		<div class="screen-header tile-layout">
+			<div>
+				<div class="back-chevron">
+					<a href="#" id="goBack"
+						ng-if="$root.$showBackButtonForStates" ng-click="$emit('$backButtonClicked')" tabindex="0">
+							<span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
+							<span class="sr-only" isc-i18n="app.aria_backButton"></span>
+					</a>
+				</div>
+				<span role="heading" aria-level="1" class="screen-header-text" isc-i18n="Predict Store Capacity"></span>
+			</div>
+			<div class="pull-right">
+				<button id="cancelAskWatson" class="btn btn-default" type="button"  role="button" aria-label="" ng-click="uiClose()" isc-i18n="Close">
+				</button>				
+			</div>
+		</div>		
+
+		<!--<div  class="cart-holder" id="orderLinesHolder" role="grid" isc-i18n="[aria-label]viewcartdetails.aria_productsListTable">
+		<div class="view-cart-list-header table-columns" role="row">
+			<div role="rowheader" class="grp-hdr-txt" isc-i18n="Configured Capacity" >
+			<div class="row">
+					<div role="rowheader" class="col-sm-5 grp-hdr-txt" isc-i18n="Description"></div>
+					<div role="rowheader" class="col-sm-3 grp-hdr-txt" isc-i18n="DeliveryMethod"></div>
+					<div role="rowheader" class="col-sm-2 grp-hdr-txt" isc-i18n="Quantity"></div>
+					<div role="rowheader" class="col-sm-2 grp-hdr-txt" isc-i18n="Price"></div>
+			</div>
+
+				<div role="rowheader" class="product-remove">
+						<span class="sr-only" isc-i18n="RemoveProduct"></span>
+				</div>
+		</div>
+		</div>
+		--> 
+
+		<div class="screen-content tile-layout">
+			 
+			<div class="date" role="presentation">
+				<label><span  class="grp-hdr-text-highlight" isc-i18n="Date"></span></label>
+			</div>
+			<center>
+			<div class="date flow-layout" role="heading">
+				 <!--<p><a href="" ng-click="showToday = true; showTomorrow = false">Left arrow</a></p>
+				<p><a href="" ng-click="showTomorrow = true; showToday = false">Right arrow</a></p>
+				<span ng-show="showToday">Today: {{date | date:'EEE, dd MMM yyyy'}}</span>-->
+				<span class="primary-link-text"><b>{{tomorrow | date:'EEE, dd MMM yyyy'}} &nbsp;&nbsp;<a href="">&#9654;</a></b></span>
+			</div>
+			</center>
+			
+			<br><br>
+			<label><span  class="grp-hdr-text-highlight" isc-i18n="Configured Capacity in Units"></span></label>
+			<center>
+			<table border="0" style="width:70%">  
+					<tr style="text-align:center;height:40px">  
+						<td style="width:50%"><span class="primary-link-text" style="text-decoration: underline;"><b>Ship from Store</b></span></td>  
+						<td style="width:50%"><span class="primary-link-text" style="text-decoration: underline;"><b>Pickup in Store</b></span></td> 
+					</tr>  
+					<tr style="text-align:center;height:20px">
+						<td><span class="primary-link-text">50</span></td>
+						<td><span class="primary-link-text">70</span></td>
+					</tr>
+			</table>
+			</center>
+			<!--<div class="left-content">
+							<label class="label-text" isc-i18n="Configured Capacity in Units"></label>
+			</div>
+
+			<div class="capacity-row" role="row">
+			<div class="row">
+				<div role="rowheader" class="col-sm-5 grp-hdr-txt" isc-i18n="For Ship at Store"></div>
+				<div role="rowheader" class="col-sm-3 grp-hdr-txt" isc-i18n="For Pick from Store"><div>
+			</div>-->
+			<!--
+			<label>
+			 <span class="comapps-label zero-width-label" isc-i18n=""></span>
+			</label>-->
+		
+			<!--	
+			<div class="capacity-row" ng-class="scanner-displayed">
+				<div class="order-number">			 
+					<label class="grp-hdr-text-highlight hash-number-align" isc-i18n="For Ship at Store" ></label> 
+					<span class="grp-hdr-text-highlight" ng-bind="50"></span>
+				</div>
+
+				<div class="order-number">			 
+					<label class="grp-hdr-text-highlight hash-number-align" isc-i18n="For Pick from Store" ></label> 
+					<span class="grp-hdr-text-highlight" ng-bind="70"></span>
+				</div>
+			</div>-->
+
+			<br><br>
+			<div class="row">
+				<div class="form-group"><div aria-label="Checkbox Label" role="group">
+				<div class="col-md-2"><div class="left-content">
+					<label><span  class="grp-hdr-text-highlight" isc-i18n="Predict Capacity"></span></label><br><label><span class="secondary-link-text" isc-i18n="Select options"></span></label>
+				</div></div>
+				
+				<div class="col-md-2" align="center"><div class="checkbox-inline" role="presentation">
+						 <label for="chk-w">
+						   <input type="checkbox" role="checkbox" ng-model="checkboxModel.weather" ng-true-value="'Yes'" ng-false-value="'No'" id="chk-w">
+						   <span class="select-icon"></span>
+						   <span class="comapps-label zero-width-label" isc-i18n="Check Weather"></span>
+						 </label>
+				</div></div>
+				<div class="col-md-2" align="center"><div class="checkbox-inline" role="presentation">
+					 <label for="chk-t">
+					   <input type="checkbox" role="checkbox" ng-model="checkboxModel.traffic" id="chk-t">
+					   <span class="select-icon"></span>
+					   <span class="comapps-label zero-width-label" isc-i18n="Check Traffic"></span>
+					 </label>
+				</div></div>
+				<div class="col-md-2" align="center"><div class="checkbox-inline" role="presentation">
+					 <label for="chk-s">
+					   <input type="checkbox" role="checkbox" ng-model="checkboxModel.sale" id="chk-s">
+					   <span class="select-icon"></span>
+					   <span class="comapps-label zero-width-label" isc-i18n="Sale at Store"></span>
+					 </label>
+				</div></div>
+				<div class="col-md-2" align="right"><div>
+					<span ng-bind="ui.askWatson"></span>
+					<button class="btn btn-default btn-primary" isc-i18n="Predict Capacity" ng-click="uiAskWatson()"></button>
+				</div></div>
+				</div></div>
+			</div>
+
+			<br><br> 
+			<div class="row">
+				<div class="col-md-2" style="text-align:left"><label><span  class="grp-hdr-text-highlight" isc-i18n="Watson Predicts"></span></label><br><label><span class="secondary-link-text" isc-i18n="Override if required"></span></label></div>
+				<!--<input type="text" class="grp-hdr-txt" isc-i18n="For Ship at store" ng-model="Ship" isc-focus="true" isc-enter=""/>-->
+				<div class="col-md-3"><isc-input 
+					label-config-innerhtml = "Ship from Store"
+					label-config-required
+					input-config-id = "inputShip"
+					input-config-name = "inputShip"
+					input-config-ng-model = "Ship" 
+					errorspan-config-ng-hide= "true">
+				</isc-input></div>
+				<!--<input type="text" class="grp-hdr-txt" isc-i18n="For Pick from store" ng-model="Pick" isc-focus="true" isc-enter=""/>-->
+				<div class="col-md-3"><isc-input 
+					label-config-innerhtml = "Pickup in Store "
+					label-config-required
+					input-config-id = "inputPick"
+					input-config-name = "inputPick"
+					input-config-ng-model = "Pick"
+					errorspan-config-ng-hide= "true">
+				</isc-input></div>
+				<div class="col-md-2" align="right"><div><span ng-bind="ui.overrideCapacity"></span>
+					<button class="btn btn-default btn-primary" isc-i18n="Apply Prediction" ng-click="uiOverrideCapacity()"></button>
+				</div></div>
+			</div>
+			<br><br><br>
+		</div>
+		
+	</div>
+</div>

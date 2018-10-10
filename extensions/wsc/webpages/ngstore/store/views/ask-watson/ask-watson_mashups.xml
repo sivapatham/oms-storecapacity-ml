@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--IBM Confidential
+IBM Sterling Order Management Store (5725-D10) - The program identifier and security classification are determined by the IBM owner of the program.
+(C) Copyright IBM Corp. 2016 All Rights Reserved.
+-->
+	<mashups>
+
+		<mashup description="Service to fetch watson prediction" endpoint="EP_CONFIG" id="AskWatson" mashuptype="XAPI" skipDataProvider="false" transactional="true">
+			<classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup" />
+			<API FlowName="ExtnAskWatsonService">
+				<Input>
+					<AskWatson PayLoad=""/>
+				</Input>
+				<Template>
+					<PredictionFromWatson Prediction=""/>
+				</Template>
+			</API>
+			<!--<API Name="getCurrencyList">
+				<Input>
+				<Currency/>
+				</Input>
+				<Template>
+					<CurrencyList/>
+				</Template>
+			</API>-->
+			<!--<APINamespace inputNS="prediction_inputNS" outputNS="prediction_outputNS" />
+			<AlternateResourceIds>
+				<AlternateResourceId altResourceId="WSCSYS00001" />
+			</AlternateResourceIds>-->
+		</mashup>
+	</mashups>

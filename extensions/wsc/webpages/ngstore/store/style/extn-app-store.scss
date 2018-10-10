@@ -1,0 +1,16 @@
+/*******************************************************************************
+ * IBM Confidential
+ * OCO Source Materials
+ * IBM Sterling Order Management Store (5725-D10)
+ * (C) Copyright IBM Corp. 2015 All Rights Reserved. , 2015 All Rights Reserved.
+ * The source code for this program is not published or otherwise divested of its trade secrets, irrespective of what has been deposited with the U.S. Copyright Office.
+ ******************************************************************************/
+//---------------------------------------------------------------------
+// Add the custom extension import statements into this file.
+// Copy this file to the extensions folder, following the folder structure.
+// Customers adding new screens or modify the existing screen css, should create a new css in the respective functional folder
+// and import those into this file. During build time the imported scss files will be compiled to the product css file and will 
+// be available in the application.
+
+//Custom Screen imports - Ask Watson
+@import "../../views/ask-watson/ask-watson";

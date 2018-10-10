@@ -1,0 +1,35 @@
+<!--
+  Licensed Materials - Property of IBM Sterling Order Management Store (5725-D10)
+  (C) Copyright IBM Corp. 2016 All Rights Reserved. , 2016 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<div class="portlet-holder return-theme transition-lookup" role="region" isc-i18n="[aria-label]home.aria_returnProductsPortlet">
+<p class="portlet-header-text text-center" isc-i18n="Intelligent Store Fulfillment"></p>
+<!-- <div class="portlet-transition-holder" ng-class="show-advaced-search">
+   <div class="scanner" >
+   	  <p class="text-center protlet-icon transition-content app-glyphicons app-icon-returns"></p>
+   	  <div class="return-lookup-widget">
+         <isc-lookup search-result-callback="uiHandleSearchResult">
+         </isc-lookup>
+      </div>
+   </div>
+<div class="item-image item-image-small" align="center">	
+</div> -->
+<span class="primary-link-text" isc-i18n="home.TITLE_ManagerDashboard"></span>
+	<img class="img-responsive" style="display:block;margin-left:auto;margin-right:auto;width:50%;"
+     ng-src="../extn/ngstore/store/views/home/watson_img.jpg"
+	 src="../extn/ngstore/store/views/home/watson_img.jpg"
+	 isc-encode-attr="src"></img>
+	<br>
+	<div class="row" align="center"><div><span ng-bind="ui.predictCapacity"></span>
+		<button class="btn btn-default btn-primary" isc-i18n="Predict Store Capacity" ng-click="uiOpenAskWatson()"></button>
+	</div></div>
+	<br>
+	<div class="row" align="center"><div><span ng-bind="ui.PredictSales"></span>
+		<button class="btn btn-default btn-primary" isc-i18n="Predict Store Sales" ng-click="uiPredictStoreSales()" disabled="disabled"></button>
+	</div></div>
+	<br>
+	<div class="row" align="center"><div><span ng-bind="ui.predictReturns"></span>
+		<button class="btn btn-default btn-primary" isc-i18n="Predict Store Returns" ng-click="uiPredictReturns()" disabled="disabled"></button>
+	</div></div>
+</div>
